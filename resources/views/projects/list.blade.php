@@ -29,7 +29,7 @@
     <div class="container mb-5">
         <div class="row justify-content-lg-start justify-content-center">
             @foreach($projects as $project)
-                @if($loop->index == 0)
+                @if($loop->index == 0 && $agent->isDesktop())
             <div class="col-lg-9 col-11 px-lg-2 px-1 mb-4 ml-4 fba-project-card">
                 <div class="row">
                     <div class="col-5" style="border-radius: 10px; background-image: url({{asset('storage/'.str_replace('\\', '/', $project->image))}}); background-size: cover; background-position: center;"></div>

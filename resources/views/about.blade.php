@@ -4,6 +4,7 @@
     use Jenssegers\Agent\Agent;
 
     $agent = new Agent();
+    $page = App\Page::first();
     ?>
     @push('title')
         Ассоциация семейного бизнеса Казахстана - эксперты
@@ -22,7 +23,8 @@
         <div class="row">
             <div class="col-lg-8 col-12">
                 <p class="fba-text-1 font-size-18 font-weight-normal mb-4">
-                    Ex anim anim irure minim in labore nulla aliqua sint incididunt occaecat qui. Ad esse incididunt ipsum laborum occaecat sit incididunt est laborum aliqua esse. Magna esse dolor elit tempor consectetur sunt duis consectetur ex culpa exercitation duis Lorem. Fugiat eu mollit ex aliquip cupidatat incididunt eu deserunt ipsum minim irure ipsum veniam do. Consectetur Lorem nisi minim aliqua consequat deserunt ex ullamco nisi.                </p>
+                    {{$page->title1}}
+                </p>
 
                 <h2 class="font-weight-medium fba-color-1 Rubik mb-4" style="{{$agent->isDesktop() ? 'font-size: 46px;' : 'font-size: 30px;'}}">
                     Проекты

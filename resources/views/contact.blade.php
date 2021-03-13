@@ -23,7 +23,7 @@
     <div class="container mt-4">
         <div class="row">
             <div class="col-lg-8 col-12">
-                <h2 class="font-weight-medium fba-color-1 Rubik mb-4" style="{{$agent->isDesktop() ? 'font-size: 30px;' : 'font-size: 24px;'}}">
+                <h2 class="font-weight-medium fba-color-1 Rubik mb-lg-4 mb-0" style="{{$agent->isDesktop() ? 'font-size: 30px;' : 'font-size: 24px;'}}">
                     Контакты
                 </h2>
             </div>

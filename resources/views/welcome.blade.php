@@ -11,7 +11,7 @@
     @endpush
     <div class="container-fluid overflow-hidden">
         <div class="row">
-            <div class="col-lg-6 col-12 d-flex align-items-center justify-content-center">
+            <div class="col-lg-6 col-12 mt-lg-0 mt-5 d-flex align-items-center justify-content-center">
                 <div class="container col-lg-9 col-12 pl-lg-5 pl-0 pr-lg-2 pr-0">
                     @if($content->title1)
                         <h1 class="font-weight-medium pl-lg-5 pl-0 text-lg-left text-center" style="{{ $agent->isDesktop() ? 'font-size: 40px;' : 'font-size: 25px;' }} color: #252525;">
@@ -38,6 +38,7 @@
             </div>
         </div>
     </div>
+    <div class="container-fluid">
     <div class="container p-lg-5 p-2 my-5" style="background-image: url({{ $agent->isDesktop() ? asset('storage/'.str_replace('\\', '/', $content->bg2)) : asset('storage/'.str_replace('\\', '/', $content->bg2_mobile)) }}); background-position: center; background-size: cover;">
         <div class="row p-lg-3 p-1">
             <div class="col-lg-6 col-10 pt-lg-0 pt-5">
@@ -54,6 +55,7 @@
             </div>
 
         </div>
+    </div>
     </div>
     <div class="container">
         <div class="row">
@@ -116,7 +118,7 @@
     </div>
 @if(count(App\Project::all()))
     <div class="container mt-5">
-        <div class="container pt-4">
+        <div class="pt-4">
         <div class="row justify-content-end">
         <div class="col-12">
             @if($content->title4)
@@ -167,38 +169,38 @@
                     </div>
             </div>
             @endforeach
-            {{--<div class="item p-4 row">--}}
-                {{--<div class="col-lg-10 col-11 px-lg-2 px-1 fba-project-card">--}}
-                    {{--<div class="row">--}}
-                        {{--<div class="col-5" style="border-radius: 10px; background-image: url({{asset('img/project.webp')}}); background-size: cover; background-position: center;"></div>--}}
-                        {{--<div class="col-7 p-lg-5 p-2 d-flex align-items-center">--}}
-                            {{--<div class="">--}}
-                                {{--<p class="{{ $agent->isDesktop() ? 'font-size-22' : 'font-size-16' }} text-black font-weight-medium">--}}
-                                    {{--Бизнес с козами--}}
-                                {{--</p>--}}
-                                {{--<p class="fba-text-1 {{$agent->isDesktop() ? 'font-size-16' : 'font-size-14'}} font-weight-normal line-height-140">--}}
-                                    {{--@if($agent->isDesktop())--}}
-                                        {{--@if(strlen('Дмитрий Беспалько, 48 лет, родной город — Костанай, козовод Полина Назарова, 35 лет, родной город — Костанай, козовод О том, как все начиналось Полина.') > 150)--}}
-                                            {{--{{mb_strimwidth('Дмитрий Беспалько, 48 лет, родной город — Костанай, козовод Полина Назарова, 35 лет, родной город — Костанай, козовод О том, как все начиналось Полина.', 0, 151,'...')}}--}}
-                                        {{--@else--}}
-                                            {{--Дмитрий Беспалько, 48 лет, родной город — Костанай, козовод Полина Назарова, 35 лет, родной город — Костанай, козовод О том, как все начиналось Полина.--}}
-                                        {{--@endif--}}
-                                    {{--@else--}}
-                                        {{--@if(strlen('Дмитрий Беспалько, 48 лет, родной город — Костанай, козовод Полина Назарова, 35 лет, родной город — Костанай, козовод О том, как все начиналось Полина.') > 70)--}}
-                                            {{--{{mb_strimwidth('Дмитрий Беспалько, 48 лет, родной город — Костанай, козовод Полина Назарова, 35 лет, родной город — Костанай, козовод О том, как все начиналось Полина.', 0, 71,'...')}}--}}
-                                        {{--@else--}}
-                                            {{--Дмитрий Беспалько, 48 лет, родной город — Костанай, козовод Полина Назарова, 35 лет, родной город — Костанай, козовод О том, как все начиналось Полина.--}}
-                                        {{--@endif--}}
-                                    {{--@endif--}}
-                                {{--</p>--}}
-                                {{--<a href="">--}}
-                                    {{--<span class="font-size-16 font-weight-normal">Читать дальше>></span>--}}
-                                {{--</a>--}}
-                            {{--</div>--}}
-                        {{--</div>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-            {{--</div>--}}
+            <div class="item p-4 row">
+                <div class="col-lg-10 col-11 px-lg-2 px-1 fba-project-card">
+                    <div class="row">
+                        <div class="col-5" style="border-radius: 10px; background-image: url({{asset('img/project.webp')}}); background-size: cover; background-position: center;"></div>
+                        <div class="col-7 p-lg-5 p-2 d-flex align-items-center">
+                            <div class="">
+                                <p class="{{ $agent->isDesktop() ? 'font-size-22' : 'font-size-16' }} text-black font-weight-medium">
+                                    Бизнес с козами
+                                </p>
+                                <p class="fba-text-1 {{$agent->isDesktop() ? 'font-size-16' : 'font-size-14'}} font-weight-normal line-height-140">
+                                    @if($agent->isDesktop())
+                                        @if(strlen('Дмитрий Беспалько, 48 лет, родной город — Костанай, козовод Полина Назарова, 35 лет, родной город — Костанай, козовод О том, как все начиналось Полина.') > 150)
+                                            {{mb_strimwidth('Дмитрий Беспалько, 48 лет, родной город — Костанай, козовод Полина Назарова, 35 лет, родной город — Костанай, козовод О том, как все начиналось Полина.', 0, 151,'...')}}
+                                        @else
+                                            Дмитрий Беспалько, 48 лет, родной город — Костанай, козовод Полина Назарова, 35 лет, родной город — Костанай, козовод О том, как все начиналось Полина.
+                                        @endif
+                                    @else
+                                        @if(strlen('Дмитрий Беспалько, 48 лет, родной город — Костанай, козовод Полина Назарова, 35 лет, родной город — Костанай, козовод О том, как все начиналось Полина.') > 70)
+                                            {{mb_strimwidth('Дмитрий Беспалько, 48 лет, родной город — Костанай, козовод Полина Назарова, 35 лет, родной город — Костанай, козовод О том, как все начиналось Полина.', 0, 71,'...')}}
+                                        @else
+                                            Дмитрий Беспалько, 48 лет, родной город — Костанай, козовод Полина Назарова, 35 лет, родной город — Костанай, козовод О том, как все начиналось Полина.
+                                        @endif
+                                    @endif
+                                </p>
+                                <a href="">
+                                    <span class="font-size-16 font-weight-normal">Читать дальше>></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 @endif
@@ -213,7 +215,7 @@
         ?>
         <div class="row">
             @if(isset($articles[0]))
-            <div class="col-lg-4 col-12">
+            <div class="col-lg-4 col-12 mb-lg-0 mb-3">
                 <img class="w-100" src="{{ asset('storage/'.str_replace('\\', '/', $articles[0]->banner)) }}" style="max-height: 190px; object-fit: cover; border-radius: 10px;" alt="">
                 <p class="Rubik font-weight-medium font-size-20 my-3">
                     {{$articles[0]->title}}
@@ -230,10 +232,10 @@
             <div class="col-lg-4 col-12">
                 @if(isset($articles[1]))
                 <div class="row mb-4">
-                <div class="col-6">
-                    <img class="w-100" src="{{ asset('storage/'.str_replace('\\', '/', $articles[1]->banner)) }}" style="height: 160px; object-fit: cover; border-radius: 10px;" alt="">
+                <div class="col-lg-6 col-4">
+                    <img class="w-100" src="{{ asset('storage/'.str_replace('\\', '/', $articles[1]->banner)) }}" style="{{ $agent->isDesktop() ? 'height: 160px;' : 'height: 97px;' }} object-fit: cover; border-radius: 10px;" alt="">
                 </div>
-                <div class="col-6">
+                <div class="col-lg-6 col-8">
                     <p class="Rubik font-weight-medium font-size-16 line-height-110 mb-3">
                         {{$articles[1]->title}}
                     </p>
@@ -249,10 +251,10 @@
                 @endif
                 @if(isset($articles[2]))
                 <div class="row">
-                    <div class="col-6">
-                        <img class="w-100" src="{{ asset('storage/'.str_replace('\\', '/', $articles[2]->banner)) }}" style="height: 160px; object-fit: cover; border-radius: 10px;" alt="">
+                    <div class="col-lg-6 col-4">
+                        <img class="w-100" src="{{ asset('storage/'.str_replace('\\', '/', $articles[2]->banner)) }}" style="{{ $agent->isDesktop() ? 'height: 160px;' : 'height: 97px;' }} object-fit: cover; border-radius: 10px;" alt="">
                     </div>
-                    <div class="col-6">
+                    <div class="col-lg-6 col-8">
                         <p class="Rubik font-weight-medium font-size-16 line-height-110 mb-3">
                             {{$articles[2]->title}}
                         </p>

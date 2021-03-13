@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('/');
 
 Route::get('/experts', 'ExpertsController@index')->name('experts');
 Route::get('/expert', 'ExpertsController@show')->name('expert');
@@ -27,6 +27,8 @@ Route::get('/articles', 'NewsController@index')->name('articles');
 Route::get('/article', 'NewsController@show')->name('article');
 
 Route::get('/about', 'ProjectController@about')->name('about');
+Route::get('/poster', 'MainController@index')->name('poster');
+
 
 Route::get('/contacts', function(){
     return view('contact');
@@ -34,7 +36,10 @@ Route::get('/contacts', function(){
 
 Route::post('/send_report', 'MainController@send')->name('send_report');
 
-
+Route::get('/posters', function (){
+    return view('posters');
+})->name('posters')->middleware('auth');
 Route::group(['prefix' => 'admin'], function () {
+
     Voyager::routes();
 });
