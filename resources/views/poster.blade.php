@@ -69,7 +69,7 @@ $content = MainPage::first();
             </div>
         </div>
         <div class="mt-5">
-            {!! $poster->desc2 !!}
+            {!! $poster->content !!}
         </div>
         <div class="mt-5">
             <h2 class="font-weight-medium fba-color-1 Rubik mb-5" style="{{$agent->isDesktop() ? 'font-size: 30px;' : 'font-size: 24px;'}}">
