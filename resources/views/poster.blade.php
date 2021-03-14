@@ -101,7 +101,7 @@ $content = MainPage::first();
                 </div>
                 @endif
                 @if(isset($poster->tarif2_name) && isset($poster->tarif2_price) && isset($poster->tarif2_desc))
-                <div class="col-lg-4 col-12 px-5">
+                <div class="col-lg-4 col-12 px-5 mb-lg-0 mb-5">
                     <div class="py-4 d-flex align-items-center justify-content-center" style="border-radius: 5px; background-color: #D1AF27;">
                         <div class="text-center">
                             <p class="font-size-16 line-height-120 text-white font-weight-light">

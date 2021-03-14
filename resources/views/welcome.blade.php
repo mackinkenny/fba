@@ -31,7 +31,7 @@
             <div class="col-lg-6 col-12 pr-0 pl-lg-5 pl-3">
                 <div class="position-relative" style="margin-bottom: 100px; margin-top: 100px;">
                     @if($content->image1)
-                        <img class="w-100" style="position: relative; z-index: 10" src="{{ asset('storage/'.$content->image1) }}" alt="">
+                        <img class="w-100" style="position: relative; z-index: 10" src="{{ asset('storage/'.str_replace('\\', '/', $content->image1)) }}" alt="">
                         <div class="position-absolute" style="top:-20%; left: -10%; width: 110%; height: 140%; z-index: 0; background-image: url({{ asset('img/shadow.webp') }}); background-size: 100% 100%; background-position: center;"></div>
                     @endif
                 </div>
@@ -169,38 +169,6 @@
                     </div>
             </div>
             @endforeach
-            <div class="item p-4 row">
-                <div class="col-lg-10 col-11 px-lg-2 px-1 fba-project-card">
-                    <div class="row">
-                        <div class="col-5" style="border-radius: 10px; background-image: url({{asset('img/project.webp')}}); background-size: cover; background-position: center;"></div>
-                        <div class="col-7 p-lg-5 p-2 d-flex align-items-center">
-                            <div class="">
-                                <p class="{{ $agent->isDesktop() ? 'font-size-22' : 'font-size-16' }} text-black font-weight-medium">
-                                    Бизнес с козами
-                                </p>
-                                <p class="fba-text-1 {{$agent->isDesktop() ? 'font-size-16' : 'font-size-14'}} font-weight-normal line-height-140">
-                                    @if($agent->isDesktop())
-                                        @if(strlen('Дмитрий Беспалько, 48 лет, родной город — Костанай, козовод Полина Назарова, 35 лет, родной город — Костанай, козовод О том, как все начиналось Полина.') > 150)
-                                            {{mb_strimwidth('Дмитрий Беспалько, 48 лет, родной город — Костанай, козовод Полина Назарова, 35 лет, родной город — Костанай, козовод О том, как все начиналось Полина.', 0, 151,'...')}}
-                                        @else
-                                            Дмитрий Беспалько, 48 лет, родной город — Костанай, козовод Полина Назарова, 35 лет, родной город — Костанай, козовод О том, как все начиналось Полина.
-                                        @endif
-                                    @else
-                                        @if(strlen('Дмитрий Беспалько, 48 лет, родной город — Костанай, козовод Полина Назарова, 35 лет, родной город — Костанай, козовод О том, как все начиналось Полина.') > 70)
-                                            {{mb_strimwidth('Дмитрий Беспалько, 48 лет, родной город — Костанай, козовод Полина Назарова, 35 лет, родной город — Костанай, козовод О том, как все начиналось Полина.', 0, 71,'...')}}
-                                        @else
-                                            Дмитрий Беспалько, 48 лет, родной город — Костанай, козовод Полина Назарова, 35 лет, родной город — Костанай, козовод О том, как все начиналось Полина.
-                                        @endif
-                                    @endif
-                                </p>
-                                <a href="">
-                                    <span class="font-size-16 font-weight-normal">Читать дальше>></span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 @endif
