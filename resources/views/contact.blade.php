@@ -114,7 +114,6 @@
         </div>
     </div>
 @endsection
-@push('script')
     @push('script')
         <script>
             $("#form").on( "submit", function( event ) {
@@ -147,4 +146,3 @@
         </script>
     @endpush
 
-@endpush

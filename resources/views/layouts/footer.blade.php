@@ -64,6 +64,28 @@ $contacts = Contact::first();
                     </a>
                 </div>
             </div>
+            <div class="col-12 order-6 mt-lg-5">
+                <div class="row">
+                    <div class="col-4">
+                        <p class="font-weight-light font-size-14 line-height-120 text-white">
+                            Подпишитесь на рассылку, что-бы быть в курсе всех новых событий!
+                        </p>
+                    </div>
+                    <div class="col-4">
+                        <input type="email" name="sender" id="sender" class="form-control bg-transparent text-white" style="border-radius: 10px;" placeholder="Введите свой e-mail">
+                    </div>
+                    <div class="col-3">
+                        <button class="btn px-5 py-1 text-white add_email" style="border: 2px solid #FFFFFF; border-radius: 10px">
+                            Подписаться
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 text-center order-last mt-4">
+                <p class="mb-0 font-size-14 text-white line-height-120">
+                    © Copyright 2012 - 2021 | Все права защищены
+                </p>
+            </div>
         </div>
     </div>
 </div>

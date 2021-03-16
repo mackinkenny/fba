@@ -83,6 +83,35 @@
         }
     });
 </script>
+<script>
+    $(".add_email").on( "click", function(e) {
+        var btn = $(e.currentTarget);
+        btn.addClass('inactive-btn');
+        $.ajax({
+            url: '{{route('add_email')}}',
+            method: 'POST',
+            data: {
+                "_token": "{{ csrf_token() }}",
+                'email': $('#sender').val(),
+            },
+            success: data => {
+                btn.removeClass('inactive-btn');
+                $('#sender').val('');
+                if (data.status == 0){
+                    toastr.success('Ваш Email сохранен!', 'Спасибо');
+                }
+                else
+                {
+                    toastr.warning('Данный email уже сохранен!', 'Внимание');
+                }
+            },
+            error: () => {
+                btn.removeClass('inactive-btn');
+                toastr.error('Что-то пошло не так!', 'Ошибка');
+            }
+        });
+    });
+</script>
 
 @stack('script')
 </body>

@@ -35,6 +35,9 @@ Route::get('/contacts', function(){
 })->name('contacts');
 
 Route::post('/send_report', 'MainController@send')->name('send_report');
+Route::post('/add_email', 'MainController@addEmail')->name('add_email');
+
+Route::get('/upload_excel_emails', 'MainController@upload_excel_emails')->name('upload_excel_emails')->middleware('auth');
 
 Route::get('/posters', function (){
     return view('posters');
