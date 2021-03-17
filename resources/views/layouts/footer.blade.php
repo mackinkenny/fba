@@ -10,7 +10,7 @@ $contacts = Contact::first();
             <div class="col-lg-2 col-12 order-1 mb-lg-0 mb-3 d-lg-block d-flex align-items-center">
                 <img class="img-fluid" src="{{ asset('img/svg/logowhite.svg') }}" alt="">
                 <a class="d-lg-none d-block ml-lg-0 ml-4" href="https://benevent.kz/">
-                    <img class="img-fluid" style="width:100px;" src="{{ asset('img/ben.svg') }}" alt="">
+                    <img class="img-fluid" style="width:140px;" src="{{ asset('img/ben.svg') }}" alt="">
                 </a>
                 <div class="d-lg-none d-block ml-4">
                     <a href="https://apps.apple.com/kz/app/ben/id1121260535?mt=8">
