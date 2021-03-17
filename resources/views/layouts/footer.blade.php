@@ -9,9 +9,17 @@ $contacts = Contact::first();
         <div class="row">
             <div class="col-lg-2 col-12 order-1 mb-lg-0 mb-3 d-lg-block d-flex align-items-center">
                 <img class="img-fluid" src="{{ asset('img/svg/logowhite.svg') }}" alt="">
-                <a class="d-lg-none d-block ml-lg-0 ml-5" href="https://benevent.kz/">
-                    <img class="img-fluid" src="{{ asset('img/ben.svg') }}" alt="">
+                <a class="d-lg-none d-block ml-lg-0 ml-4" href="https://benevent.kz/">
+                    <img class="img-fluid" style="width:100px;" src="{{ asset('img/ben.svg') }}" alt="">
                 </a>
+                <div class="d-lg-none d-block ml-4">
+                    <a href="https://apps.apple.com/kz/app/ben/id1121260535?mt=8">
+                        <img class="img-fluid mt-3" src="{{ asset('img/appstore.png') }}" alt="">
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=acelight.kz.ben">
+                        <img class="img-fluid mt-3" src="{{ asset('img/gplay.png') }}" alt="">
+                    </a>
+                </div>
             </div>
             <div class="col-lg-2 col-12 order-lg-2 order-3 mb-lg-0 mb-3">
                 <p class="font-size-18 font-weight-medium text-white line-height-110 mb-lg-2 mb-0" style="{{$agent->isDesktop() ? 'height: 50px;' : 'height: 25px;'}}">
@@ -71,12 +79,18 @@ $contacts = Contact::first();
                 <a href="https://benevent.kz/">
                     <img class="img-fluid" src="{{ asset('img/ben.svg') }}" alt="">
                 </a>
+                <a href="https://apps.apple.com/kz/app/ben/id1121260535?mt=8">
+                    <img class="img-fluid mt-3" src="{{ asset('img/appstore.png') }}" alt="">
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=acelight.kz.ben">
+                    <img class="img-fluid mt-3" src="{{ asset('img/gplay.png') }}" alt="">
+                </a>
             </div>
             <div class="col-12 order-6 mt-lg-5">
                 <div class="row">
                     <div class="col-lg-4 col-12">
                         <p class="font-weight-light font-size-14 line-height-120 text-white">
-                            Подпишитесь на рассылку, что-бы быть в курсе всех новых событий!
+                            Подпишитесь на рассылку, чтобы быть в курсе всех новых событий!
                         </p>
                     </div>
                     <div class="col-lg-4 col-12">
