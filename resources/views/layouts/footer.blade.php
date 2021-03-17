@@ -7,8 +7,11 @@ $contacts = Contact::first();
 <div class="container-fluid py-5" style="background-color: #073417;">
     <div class="container">
         <div class="row">
-            <div class="col-lg-2 col-12 order-1 mb-lg-0 mb-3">
+            <div class="col-lg-2 col-12 order-1 mb-lg-0 mb-3 d-lg-block d-flex align-items-center">
                 <img class="img-fluid" src="{{ asset('img/svg/logowhite.svg') }}" alt="">
+                <a class="d-lg-none d-block ml-lg-0 ml-5" href="https://benevent.kz/">
+                    <img class="img-fluid" src="{{ asset('img/ben.svg') }}" alt="">
+                </a>
             </div>
             <div class="col-lg-2 col-12 order-lg-2 order-3 mb-lg-0 mb-3">
                 <p class="font-size-18 font-weight-medium text-white line-height-110 mb-lg-2 mb-0" style="{{$agent->isDesktop() ? 'height: 50px;' : 'height: 25px;'}}">
@@ -64,17 +67,22 @@ $contacts = Contact::first();
                     </a>
                 </div>
             </div>
+            <div class="col-lg-2 col-10 order-lg-6 mb-lg-0 mb-3 pl-lg-4 pl-0 d-lg-block d-none">
+                <a href="https://benevent.kz/">
+                    <img class="img-fluid" src="{{ asset('img/ben.svg') }}" alt="">
+                </a>
+            </div>
             <div class="col-12 order-6 mt-lg-5">
                 <div class="row">
-                    <div class="col-4">
+                    <div class="col-lg-4 col-12">
                         <p class="font-weight-light font-size-14 line-height-120 text-white">
                             Подпишитесь на рассылку, что-бы быть в курсе всех новых событий!
                         </p>
                     </div>
-                    <div class="col-4">
+                    <div class="col-lg-4 col-12">
                         <input type="email" name="sender" id="sender" class="form-control bg-transparent text-white" style="border-radius: 10px;" placeholder="Введите свой e-mail">
                     </div>
-                    <div class="col-3">
+                    <div class="col-lg-3 col-12 mt-lg-0 mt-3">
                         <button class="btn px-5 py-1 text-white add_email" style="border: 2px solid #FFFFFF; border-radius: 10px">
                             Подписаться
                         </button>
@@ -82,9 +90,15 @@ $contacts = Contact::first();
                 </div>
             </div>
             <div class="col-12 text-center order-last mt-4">
-                <p class="mb-0 font-size-14 text-white line-height-120">
-                    © Copyright 2012 - 2021 | Все права защищены
+                <p class="mt-lg-0 mt-3 mb-lg-0 d-lg-none d-block">
+                    <a class="text-decoration-none" href="https://welumicool.com"><span class="font-size-14 font-weight-normal text-white">Made in <img
+                                    src="{{ asset('img/wlc.png') }}" alt=""></span></a>
                 </p>
+                <p class="mb-0 font-size-14 text-white line-height-120">
+                    © Copyright 2012 - 2021 | Все права защищены <a class="text-decoration-none d-lg-block d-none" href="https://welumicool.com"><span class="font-size-14 font-weight-normal text-white ml-5">Made in <img
+                                src="{{ asset('img/wlc.png') }}" alt=""></span></a>
+                </p>
+
             </div>
         </div>
     </div>
