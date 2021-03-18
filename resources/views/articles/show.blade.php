@@ -14,7 +14,7 @@
                 <span class="small font-weight-light">Главная</span>
             </a>
             <span class="small font-weight-light">/</span>
-            <a href="{{ route('projects') }}">
+            <a href="{{ route('articles') }}">
                 <span class="small font-weight-light">Новости</span>
             </a>
             <span class="small font-weight-light">/</span>

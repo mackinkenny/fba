@@ -19,9 +19,11 @@
                         </h1>
                     @endif
                     <div class="d-flex justify-content-between px-lg-5 px-0 pt-4">
-                        <button class="btn fba-btn text-white px-3 py-2 {{ $agent->isDesktop() ? 'font-size-18' : 'font-size-14' }} w-50 mr-3">
+                        <a href="http://api.whatsapp.com/send?phone=87072404040" class="text-decoration-none  w-50 mr-3" target="_blank">
+                        <button class="btn fba-btn text-white px-3 py-2 {{ $agent->isDesktop() ? 'font-size-18' : 'font-size-14' }} w-100">
                             Позвонить
                         </button>
+                        </a>
                         <a href="{{route('contacts')}}" class="btn fba-btn text-white px-3 py-2 {{ $agent->isDesktop() ? 'font-size-18' : 'font-size-14' }} w-50 ml-3">
                             Контакты
                         </a>

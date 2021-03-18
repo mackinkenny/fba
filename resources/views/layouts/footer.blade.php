@@ -22,7 +22,7 @@ $contacts = Contact::first();
                     </a>
                 </div>
                 </div>
-                <p class="font-weight-normal font-size-14 text-white line-height-100 mt-3 pr-5 mb-2">все деловые события в одном месте!</p>
+                <p class="font-weight-normal font-size-14 text-white line-height-100 mt-3 pr-5 mb-2 d-lg-none d-block">все деловые события в одном месте!</p>
             </div>
             <div class="col-lg-2 col-12 order-lg-2 order-3 mb-lg-0 mb-3">
                 <p class="font-size-18 font-weight-medium text-white line-height-110 mb-lg-2 mb-0" style="{{$agent->isDesktop() ? 'height: 50px;' : 'height: 25px;'}}">

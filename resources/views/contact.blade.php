@@ -89,13 +89,13 @@
                             </p>
                             <form action="" id="form">
                                 <div class="form-group">
-                                    <input type="text" name="name" id="name" class="form-control bg-transparent" placeholder="Имя">
+                                    <input type="text" name="name" id="name" class="form-control bg-transparent" placeholder="Имя" required>
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" name="email" id="email" class="form-control bg-transparent" placeholder="Email">
+                                    <input type="email" name="email" id="email" class="form-control bg-transparent" placeholder="Email" required>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" name="phone" id="phone" class="form-control bg-transparent" placeholder="Телефон">
+                                    <input type="text" name="phone" id="phone" class="form-control bg-transparent" placeholder="Телефон" required>
                                 </div>
                                 <div class="form-group">
                                     <textarea class="form-control bg-transparent" name="comment" id="comment" cols="30" rows="5" placeholder="Сообщение"></textarea>
