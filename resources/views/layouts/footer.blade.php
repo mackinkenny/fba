@@ -7,7 +7,8 @@ $contacts = Contact::first();
 <div class="container-fluid py-5" style="background-color: #073417;">
     <div class="container">
         <div class="row">
-            <div class="col-lg-2 col-12 order-1 mb-lg-0 mb-3 d-lg-block d-flex align-items-center">
+            <div class="col-lg-2 col-12 order-1 mb-lg-0 mb-3">
+                <div class=" d-lg-block d-flex align-items-center">
                 <img class="img-fluid" src="{{ asset('img/svg/logowhite.svg') }}" alt="">
                 <a class="d-lg-none d-block ml-lg-0 ml-4" href="https://benevent.kz/">
                     <img class="img-fluid" style="width:140px;" src="{{ asset('img/ben.svg') }}" alt="">
@@ -20,6 +21,8 @@ $contacts = Contact::first();
                         <img class="img-fluid mt-3" src="{{ asset('img/gplay.png') }}" alt="">
                     </a>
                 </div>
+                </div>
+                <p class="font-weight-normal font-size-14 text-white line-height-100 mt-3 pr-5 mb-2">все деловые события в одном месте!</p>
             </div>
             <div class="col-lg-2 col-12 order-lg-2 order-3 mb-lg-0 mb-3">
                 <p class="font-size-18 font-weight-medium text-white line-height-110 mb-lg-2 mb-0" style="{{$agent->isDesktop() ? 'height: 50px;' : 'height: 25px;'}}">
@@ -60,24 +63,23 @@ $contacts = Contact::first();
                     Подписывайтесь в соц сетях
                 </p>
 
-                <div class="d-flex justify-content-lg-between py-1">
-                    <a class="mr-lg-0 mr-4" href="{{$contacts->facebook}}">
+                <div class="d-flex py-1">
+                    @if(isset($contacts->facebook))
+                    <a class="mr-lg-4 mr-4  " href="{{$contacts->facebook}}">
                         <i class="fab fa-facebook-square text-white fa-lg"></i>
                     </a>
-                    <a class="mr-lg-0 mr-4" href="{{$contacts->whatsapp}}">
-                        <i class="fab fa-whatsapp text-white fa-lg"></i>
-                    </a>
-                    <a class="mr-lg-0 mr-4" href="{{$contacts->telegram}}">
-                        <i class="fab fa-telegram-plane text-white fa-lg"></i>
-                    </a>
-                    <a class="mr-lg-0 mr-4" href="{{$contacts->instagram}}">
+                    @endif
+                    @if($contacts->instagram)
+                    <a class="mr-lg-4 mr-4" href="{{$contacts->instagram}}">
                         <i class="fab fa-instagram text-white fa-lg"></i>
                     </a>
+                    @endif
                 </div>
             </div>
             <div class="col-lg-2 col-10 order-lg-6 mb-lg-0 mb-3 pl-lg-4 pl-0 d-lg-block d-none">
-                <a href="https://benevent.kz/">
+                <a href="https://benevent.kz/" class="text-decoration-none">
                     <img class="img-fluid" src="{{ asset('img/ben.svg') }}" alt="">
+                    <p class="font-weight-normal font-size-14 text-white line-height-100 mt-1 pr-5 mb-2">все деловые события в одном месте!</p>
                 </a>
                 <a href="https://apps.apple.com/kz/app/ben/id1121260535?mt=8">
                     <img class="img-fluid mt-3" src="{{ asset('img/appstore.png') }}" alt="">
@@ -103,16 +105,16 @@ $contacts = Contact::first();
                     </div>
                 </div>
             </div>
-            <div class="col-12 text-center order-last mt-4">
-                <p class="mt-lg-0 mt-3 mb-lg-0 d-lg-none d-block">
+            <div class="col-12 text-lg-center text-left order-last mt-4">
+
+                <p class="mb-0 font-size-12 text-white line-height-120">
+                    © Copyright 2012 - 2021 | Все права защищены <span class="ml-lg-4 ml-0 mt-lg-0 mt-3 d-lg-inline d-block">Политика конфиденциальности</span> <a class="text-decoration-none d-lg-block d-none" href="https://welumicool.com"><span class="font-size-14 font-weight-normal text-white ml-5">Made in <img
+                                src="{{ asset('img/wlc.png') }}" alt=""></span></a>
+                </p>
+                <p class="mt-lg-0 mt-3 mb-lg-0 d-lg-none d-block text-center">
                     <a class="text-decoration-none" href="https://welumicool.com"><span class="font-size-14 font-weight-normal text-white">Made in <img
                                     src="{{ asset('img/wlc.png') }}" alt=""></span></a>
                 </p>
-                <p class="mb-0 font-size-14 text-white line-height-120">
-                    © Copyright 2012 - 2021 | Все права защищены <a class="text-decoration-none d-lg-block d-none" href="https://welumicool.com"><span class="font-size-14 font-weight-normal text-white ml-5">Made in <img
-                                src="{{ asset('img/wlc.png') }}" alt=""></span></a>
-                </p>
-
             </div>
         </div>
     </div>
