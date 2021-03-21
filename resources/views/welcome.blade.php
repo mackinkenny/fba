@@ -186,8 +186,10 @@
         <div class="row">
             @if(isset($articles[0]))
             <div class="col-lg-4 col-12 mb-lg-0 mb-3">
+				<a href="{{ route('article',['v' => $articles[0]->id, 'name' => $articles[0]->title]) }}" class="text-decoration-none">
+				<div>
                 <img class="w-100" src="{{ asset('storage/'.str_replace('\\', '/', $articles[0]->banner)) }}" style="max-height: 190px; object-fit: cover; border-radius: 10px;" alt="">
-                <p class="Rubik font-weight-medium font-size-20 my-3">
+                <p class="Rubik font-weight-medium font-size-20 my-3 text-dark">
                     {{$articles[0]->title}}
                 </p>
                 <p class="fba-text-1 font-size-14 font-weight-normal">
@@ -197,16 +199,20 @@
                         {{ $articles[0]->desc }}
                     @endif
                 </p>
+				</div>
+				</a>
             </div>
             @endif
             <div class="col-lg-4 col-12">
                 @if(isset($articles[1]))
+				<a href="{{ route('article',['v' => $articles[1]->id, 'name' => $articles[1]->title]) }}" class="text-decoration-none">
+				<div>
                 <div class="row mb-4">
                 <div class="col-lg-6 col-4">
                     <img class="w-100" src="{{ asset('storage/'.str_replace('\\', '/', $articles[1]->banner)) }}" style="{{ $agent->isDesktop() ? 'height: 160px;' : 'height: 97px;' }} object-fit: cover; border-radius: 10px;" alt="">
                 </div>
                 <div class="col-lg-6 col-8">
-                    <p class="Rubik font-weight-medium font-size-16 line-height-110 mb-3">
+                    <p class="Rubik font-weight-medium font-size-16 line-height-110 mb-3 text-dark">
                         {{$articles[1]->title}}
                     </p>
                     <p class="fba-text-1 font-size-14 font-weight-normal line-height-110">
@@ -218,14 +224,18 @@
                     </p>
                 </div>
                 </div>
+					</div>
+					</a>
                 @endif
                 @if(isset($articles[2]))
+				<a href="{{ route('article',['v' => $articles[2]->id, 'name' => $articles[2]->title]) }}" class="text-decoration-none">
+				<div>
                 <div class="row">
                     <div class="col-lg-6 col-4">
                         <img class="w-100" src="{{ asset('storage/'.str_replace('\\', '/', $articles[2]->banner)) }}" style="{{ $agent->isDesktop() ? 'height: 160px;' : 'height: 97px;' }} object-fit: cover; border-radius: 10px;" alt="">
                     </div>
                     <div class="col-lg-6 col-8">
-                        <p class="Rubik font-weight-medium font-size-16 line-height-110 mb-3">
+                        <p class="Rubik font-weight-medium font-size-16 line-height-110 mb-3 text-dark">
                             {{$articles[2]->title}}
                         </p>
                         <p class="fba-text-1 font-size-14 font-weight-normal line-height-110">
@@ -237,16 +247,20 @@
                         </p>
                     </div>
                 </div>
+					</div>
+				</a>
                 @endif
             </div>
             <div class="col-lg-4 col-12 mt-lg-0 mt-4">
                 @if(isset($articles[3]))
+				<a href="{{ route('article',['v' => $articles[3]->id, 'name' => $articles[3]->title]) }}" class="text-decoration-none">
+				<div>
                 <div class="row mb-4">
                     <div class="col-4">
                         <img class="w-100" src="{{ asset('storage/'.str_replace('\\', '/', $articles[3]->banner)) }}" style="height: 97px; object-fit: cover; border-radius: 10px;" alt="">
                     </div>
                     <div class="col-8">
-                        <p class="Rubik font-weight-medium font-size-16 line-height-110 mb-3">
+                        <p class="Rubik font-weight-medium font-size-16 line-height-110 mb-3 text-dark">
                             {{$articles[3]->title}}
                         </p>
                         <p class="fba-text-1 font-size-14 font-weight-normal line-height-110">
@@ -258,8 +272,12 @@
                         </p>
                     </div>
                 </div>
+					</div>
+				</a>
                 @endif
                 @if(isset($articles[4]))
+				<a href="{{ route('article',['v' => $articles[4]->id, 'name' => $articles[4]->title]) }}" class="text-decoration-none">
+				<div>
                 <div class="row mb-4">
                     <div class="col-4">
                         <img class="w-100" src="{{ asset('storage/'.str_replace('\\', '/', $articles[4]->banner)) }}" style="height: 97px; object-fit: cover; border-radius: 10px;" alt="">
@@ -277,8 +295,12 @@
                         </p>
                     </div>
                 </div>
+					</div>
+				</a>
                 @endif
                 @if(isset($articles[5]))
+				<a href="{{ route('article',['v' => $articles[5]->id, 'name' => $articles[5]->title]) }}" class="text-decoration-none">
+				<div>
                 <div class="row mb-4">
                     <div class="col-4">
                         <img class="w-100" src="{{ asset('storage/'.str_replace('\\', '/', $articles[5]->banner)) }}" style="height: 97px; object-fit: cover; border-radius: 10px;" alt="">
@@ -296,6 +318,8 @@
                         </p>
                     </div>
                 </div>
+					</div>
+				</a>
                 @endif
             </div>
         </div>

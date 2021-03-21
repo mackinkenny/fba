@@ -37,7 +37,7 @@
         <div class="row justify-content-lg-start justify-content-center">
             @foreach($projects as $project)
                     <div class="col-lg-4 col-10 mb-4">
-                        <div class="fba-project-card">
+                        <div class="fba-project-card h-100">
                             <img class="w-100" src="{{ asset('storage/'.$project->image) }}" style="max-height: 190px; object-fit: cover; border-radius: 10px;" alt="">
                             <div class="p-3">
                                 <p class="{{ $agent->isDesktop() ? 'font-size-22' : 'font-size-16' }} text-black font-weight-medium">

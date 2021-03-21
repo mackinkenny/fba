@@ -22,6 +22,7 @@ Route::get('/expert', 'ExpertsController@show')->name('expert');
 
 Route::get('/projects', 'ProjectController@index')->name('projects');
 Route::get('/project', 'ProjectController@show')->name('project');
+Route::get('/family_project', 'ProjectController@familyshow')->name('family_project');
 
 Route::get('/articles', 'NewsController@index')->name('articles');
 Route::get('/article', 'NewsController@show')->name('article');

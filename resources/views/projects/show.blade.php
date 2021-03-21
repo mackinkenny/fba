@@ -6,7 +6,7 @@
     $agent = new Agent();
     ?>
     @push('title')
-        Ассоциация семейного бизнеса Казахстана - эксперт {{$project->name}}
+        Ассоциация семейного бизнеса Казахстана - {{$project->name}}
     @endpush
     <div class="container pt-4">
         <div class="">
@@ -14,9 +14,7 @@
                 <span class="small font-weight-light">Главная</span>
             </a>
             <span class="small font-weight-light">/</span>
-            <a href="{{ route('projects') }}">
                 <span class="small font-weight-light">Проекты</span>
-            </a>
             <span class="small font-weight-light">/</span>
             <span class="small font-weight-light">{{ $project->name }}</span>
         </div>
